@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("const test = document.querySelector('.test')\r\nconst press = document.querySelector('.press')\r\nconst image = document.querySelector('.image')\r\n\r\nasync function testing() {\r\n    try {\r\n        const value = test.value\r\n        const API = await fetch(`https://api.weatherapi.com/v1/current.json?key=95435ac00eca4f8d88a162138230108&q=${value}`);\r\n        const realAPI = await API.json();\r\n        const bla = realAPI.current\r\n        image.src = realAPI.current.condition.icon\r\n        console.log(bla)\r\n    }\r\n    catch {\r\n        console.log(\"City not found\")\r\n    }\r\n}\r\n\r\npress.addEventListener('click', () => testing());\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("const test = document.querySelector('.test')\r\nconst press = document.querySelector('.press')\r\nconst image = document.querySelector('.image')\r\n\r\nasync function testing() {\r\n    try {\r\n        const value = test.value\r\n        const API = await fetch(`https://api.weatherapi.com/v1/current.json?key=95435ac00eca4f8d88a162138230108&q=${value}`);\r\n        const realAPI = await API.json();\r\n        const bla = realAPI.current.temp_c\r\n        image.src = realAPI.current.condition.icon\r\n        console.log(bla)\r\n    }\r\n    catch {\r\n        console.log(\"City not found\")\r\n    }\r\n}\r\n\r\npress.addEventListener('click', () => testing());\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
