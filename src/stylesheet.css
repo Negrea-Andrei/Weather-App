@@ -1,0 +1,16 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: aqua;
+    font-size: clamp(2rem, 6vw, 3rem);
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
