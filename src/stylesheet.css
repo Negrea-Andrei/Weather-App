@@ -27,7 +27,7 @@ header {
 }
 
 input {
-    width: clamp(250px, 25%, 450px);
+    width: clamp(200px, 15%, 400px);
     margin: 0px 25px 0px 0px;
 }
 

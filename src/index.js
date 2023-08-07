@@ -1,4 +1,5 @@
-const test = document.querySelector('.test')
+const city = document.querySelector('.city');
+const country = document.querySelector('.country')
 const press = document.querySelector('.press')
 const image = document.querySelector('.image')
 
@@ -10,8 +11,10 @@ async function testing() {
         const windSpeed = document.querySelector('.wind_speed');
         const humidity = document.querySelector('.humidity')
 
-        const value = test.value
-        const API = await fetch(`https://api.weatherapi.com/v1/current.json?key=95435ac00eca4f8d88a162138230108&q=${value}`);
+        const cityName = city.value
+        const countryName = country.value
+
+        const API = await fetch(`https://api.weatherapi.com/v1/current.json?key=95435ac00eca4f8d88a162138230108&q=${cityName}`);
         const realAPI = await API.json();
         const bla = realAPI
         image.src = realAPI.current.condition.icon
