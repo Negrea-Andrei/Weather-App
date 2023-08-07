@@ -33,9 +33,7 @@ async function testing() {
             API = await fetch(`https://api.weatherapi.com/v1/current.json?key=95435ac00eca4f8d88a162138230108&q=${cityName}`);
 
             const realAPI = await API.json();
-            const bla = realAPI
             image.src = realAPI.current.condition.icon
-            console.log(bla)
 
             location.innerHTML = realAPI.location.name;
             temperature.innerHTML = `Temperature: ${realAPI.current.temp_c}°C`;
