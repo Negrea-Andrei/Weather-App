@@ -47,7 +47,7 @@ async function testing() {
     }
     catch {
         location.innerHTML = "City not found";
-        temperature.innerHTML = '';
+        temperature.innerHTML = 'Please enter a different city and country';
         condition.innerHTML = '';
         windSpeed.innerHTML = '';
         humidity.innerHTML = '';
