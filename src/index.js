@@ -2,18 +2,22 @@ const city = document.querySelector('.city');
 const country = document.querySelector('.country')
 const press = document.querySelector('.press')
 const image = document.querySelector('.image')
+const card = document.querySelector('.weather_info_card')
+const humidity = document.querySelector('.humidity')
 
 async function testing() {
+    card.style.display = 'flex'
     const location = document.querySelector('.location');
     const temperature = document.querySelector('.temperature');
     const condition = document.querySelector('.condition');
-    const windSpeed = document.querySelector('.wind_speed');
-    const humidity = document.querySelector('.humidity')
+    const windSpeed = document.querySelector('.wind_speed');    
+    
 
     try {
 
         const cityName = city.value
         const countryName = country.value
+        
 
         if (countryName !== '') {
             API = await fetch(`https://api.weatherapi.com/v1/current.json?key=95435ac00eca4f8d88a162138230108&q=${cityName},${countryName}`);
